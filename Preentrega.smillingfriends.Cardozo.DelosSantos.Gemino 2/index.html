@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiling Friends - La oficina</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
+</head>
+<body>
+    <div class="pantalla">
+    <div class="contenido">
+    <div class="presentacion">
+        <h1>SMILING FRIENDS</h1>
+        <p class="sobrelinea">¡HACENOS CLICK Y REPARTIMOS SONRISAS!</p>
+    </div>
+        <div class="marco-juego">
+        <div class="barra">
+        <div id="contador">SONRISAS: 0</div>
+    </div>
+    <div id="escena"></div>
+    </div>
+    </div>
+    </div>
+    <div id="screamer">
+        <img src="./img/jeremy.png" alt="Jeremy">
+    </div>
+    <div id="derrota" role="alert" aria-live="assertive">
+        <p>Perdiste, clickeaste a Mr. Boss &gt;:(</p>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
