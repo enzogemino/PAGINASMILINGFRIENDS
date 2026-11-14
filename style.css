@@ -1,0 +1,127 @@
+* { box-sizing: border-box; }
+body { 
+    margin: 0; 
+    background-color: #f8f1e3; 
+    font-family: Arial, sans-serif; }
+.pantalla { 
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    padding: 30px 20px; }
+.contenido { 
+    width: 100%; 
+    max-width: 1100px; }
+.presentacion { 
+    text-align: center; }
+.presentacion h1 { 
+    font-size: clamp(36px, 7.5vw, 76px);
+    margin: 10px 0;
+    -webkit-text-stroke: 2px black;
+    paint-order: stroke fill; }
+h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: #FFE45C;
+    text-align: center;
+}
+.sobrelinea {
+     font-size: 18px; }
+.marco-juego { 
+    border: 4px solid black; 
+    background-color: white; 
+    margin-top: 25px; }
+.barra { 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap; 
+    padding: 15px; 
+    font-size: 20px; 
+    font-weight: bold; 
+    position: relative;
+}
+#contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#puntos-alerta {
+    display: none;
+    color: #d61717;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 0;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+#puntos-alerta.positivo {
+    color: #168a35;
+}
+#escena { 
+    width: 100%; 
+    height: 500px; 
+    overflow: hidden; 
+    position: relative; 
+    background-color: #f8f1e3; }
+#escena canvas { 
+    display: block; }
+@keyframes arcoiris {
+    0% { background-color: lightcoral; }
+    25% { background-color: khaki; }
+    50% { background-color: lightgreen; }
+    75% { background-color: lightblue; }
+    100% { background-color: lightcoral; }
+}
+.arcoiris { 
+    animation: arcoiris 2s infinite; }
+#screamer { 
+    display: none; 
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: black; 
+    z-index: 10; 
+    justify-content: center;
+    align-items: center; }
+#screamer.visible { 
+    display: flex; }
+#screamer img { 
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; }
+#derrota {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 11;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #f22;
+    text-align: center;
+}
+#derrota.visible {
+    display: flex;
+}
+#derrota p {
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(32px, 7vw, 72px);
+    font-weight: 700;
+}
+body {
+    background-image: url('./img/trabajo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+}
